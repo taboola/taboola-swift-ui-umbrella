@@ -10,6 +10,6 @@ import TaboolaSDK
 
 public protocol СlassicPageWrappable: AnyObject {
     var page: TBLClassicPage! { get }
-    var delegates: [Coordinator] { get set }
+    var delegates: [UnitCoordinator] { get set }
     var reusableViewsQueue: ReusableViewsQueue<String, TBLClassicUnit> { get }
 }
