@@ -87,7 +87,7 @@ public struct ClassicDeeperDiveUnitSwiftUI: UIViewRepresentable, UnitProvidable 
     }
 }
 
-public class DeeperDiveCoordinator: UnitCoordinator, ClassicPageWrapperDelegate {
+public class DeeperDiveCoordinator: Coordinator, ClassicPageWrapperDelegate {
     // Pulled out of the unit struct at init time so click routing doesn't
     // need to cast `unit` back to the concrete deeper-dive type on every callback.
     public var deeperDiveDidReceiveClick: ((String, Bool) -> Bool)?

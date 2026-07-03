@@ -10,7 +10,7 @@ import Foundation
 /// Common shape every SwiftUI unit struct exposes so the page wrapper can
 /// route SDK callbacks generically (filter delegates by placement, propagate
 /// height into the unit's `@Binding`). Adopting this is what lets a new unit
-/// type plug into `UnitCoordinator` without page-wrapper changes.
+/// type plug into `Coordinator` without page-wrapper changes.
 public protocol UnitProvidable {
     var placement: String { get }
     var height: CGFloat { get set }
@@ -22,7 +22,7 @@ public protocol UnitProvidable {
 /// subclass) so shared behavior — height propagation, placement lookup — lives
 /// in one place. Subclasses override only when their unit needs different
 /// behavior (e.g. a fixed-size banner would override `didLoadWithHeight` to a no-op).
-public class UnitCoordinator: NSObject {
+public class Coordinator: NSObject {
     public var unit: any UnitProvidable
 
     public init(unit: any UnitProvidable) {
