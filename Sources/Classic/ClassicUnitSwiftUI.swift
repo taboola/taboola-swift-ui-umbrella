@@ -68,7 +68,7 @@ public struct ClassicUnitSwiftUI: UIViewRepresentable, UnitProvidable {
     }
 
     public func makeCoordinator() -> Coordinator {
-        Coordinator(self)
+        ClassicUnitCoordinator(self)
     }
 }
 
@@ -77,7 +77,7 @@ public struct ClassicUnitSwiftUI: UIViewRepresentable, UnitProvidable {
 /// Receives SDK callbacks routed through the page wrapper and propagates the
 /// reported height into the unit's `@Binding`. Created automatically by
 /// `makeCoordinator()`; publishers do not construct it directly.
-public class Coordinator: UnitCoordinator, ClassicPageWrapperDelegate {
+public class ClassicUnitCoordinator: Coordinator, ClassicPageWrapperDelegate {
     // No height override needed — base `didLoadWithHeight` does the right thing
     // for any resizable unit. Subclass exists only to provide a typed init.
     public init(_ unit: ClassicUnitSwiftUI) {
