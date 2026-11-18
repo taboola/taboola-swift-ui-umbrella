@@ -1,9 +1,9 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 import PackageDescription
 let package = Package(
     name: "TaboolaSDK-SwiftUI-Umbrella",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -19,7 +19,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "TaboolaSDK",
-            url: "https://taboola-mobile-sdk.s3-us-west-2.amazonaws.com/ios/sdk-binaries/xcframework/official/4.2.10/TaboolaSDK.xcframework.zip",
-            checksum: "f16a4bfda4b7b0e4fd35c04289f9e27538b9c5652526c6d5512f5af5ac7ec34f")
+            url: "https://taboola-mobile-sdk.s3-us-west-2.amazonaws.com/ios/sdk-binaries/xcframework/official/4.3.1/TaboolaSDK.xcframework.zip",
+            checksum: "59c27dfbc6afdda748057660c69a4a0ae86022e4c9463c1f880f984d138e7507")
     ]
 )
